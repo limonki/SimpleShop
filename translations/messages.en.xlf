@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="welcome">
+                <source>Welcome</source>
+                <target>Welcome to the SimpleShop!</target>
+            </trans-unit>
+            <trans-unit id="welcome_msg">
+                <source>Welcome msg</source>
+                <target>Welcome to the SimpleShop.</target>
+            </trans-unit>
+            <trans-unit id="newsest">
+                <source>Newsest</source>
+                <target>Newsest:</target>
+            </trans-unit>
+            <trans-unit id="login_title">
+                <source>Login title</source>
+                <target>Please login</target>
+            </trans-unit>
+            <trans-unit id="log_in_msg">
+                <source>Log In</source>
+                <target>SimpleShop</target>
+            </trans-unit>
+            <trans-unit id="sign_in">
+                <source>Sign In</source>
+                <target>Sign In</target>
+            </trans-unit>
+            <trans-unit id="sign_up">
+                <source>Sign Up</source>
+                <target>Sign Up</target>
+            </trans-unit>
+            <trans-unit id="forgot_your_password">
+                <source>Forgot your password</source>
+                <target>Forgot your password?</target>
+            </trans-unit>
+            <trans-unit id="click_here">
+                <source>Click here</source>
+                <target>Click here!</target>
+            </trans-unit>
+            <trans-unit id="email_value">
+                <source>Email value</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="password_value">
+                <source>Password value</source>
+                <target>Password</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

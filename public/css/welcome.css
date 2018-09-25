@@ -1,0 +1,28 @@
+#main {
+  background: url(../images/main.jpg);
+  width: 100%;
+  background-size: cover;
+}
+
+#welcome-msg {
+  padding: 32px;
+  text-align: center;
+  font-size: 36px;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-shadow: 2px 2px 4px #000000;
+  color: #efefef;
+}
+
+.center {
+  padding: 12px;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  #welcome-msg {
+    font-size: 48px;
+  }
+}

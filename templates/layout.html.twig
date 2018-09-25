@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+          <link href="{{ asset('favicon.png') }}" rel="icon" type="image/png" />
+          <link href="{{ asset('css/loader.css') }}" rel="stylesheet" />
+          <link href="{{ asset('css/topnav.css') }}" rel="stylesheet" />
+          <link href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+        <div class="loader"></div>
+        <div class="background-loader"></div>
+        <div class="topnav" id="topnav">
+          <a href="{{ path('welcome') }}">Welcome</a>
+          <a href="#news">What's new?</a>
+          <a href="#discount">Discounts</a>
+          <a href="#shopping_cart" class="left"><i class="fa fa-shopping-cart"></i> Shopping cart</a>
+          <a href="{{ path('login') }}" class="left"><i class="fa fa-sign-in"></i> Login</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+          <script src="{{ asset('js/jquery-latest.min.js') }}"></script>
+          <script src="{{ asset('js/loader.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

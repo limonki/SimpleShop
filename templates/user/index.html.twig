@@ -1,0 +1,69 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+  <div class="center">
+    <div id="box"></div>
+    <form method="post">
+      <div class="box">
+        <h1>{{ log_in_msg }}</h1>
+        <input type="email" name="email" value="{{ email_value }}" onFocus="field_focus(this, '{{ email_value }}');" onblur="field_blur(this, '{{ email_value }}');" class="email" />
+        <input type="password" name="password" value="{{ password_value }}" onFocus="field_focus(this, '{{ password_value }}');" onblur="field_blur(this, '{{ password_value }}');" class="email" />
+        <div class="btn">{{ sign_in }}</div>
+        <div id="btn2">{{ sign_up }}</div>
+      </div>
+    </form>
+    <p>{{ forgot_your_password }} <a href="#">{{ click_here }}</a></p>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+        <script>
+          $(document).on('click', '.btn', function()
+          {
+            var email = $("input[name='email']").val();
+            var password = $("input[name='password']").val();
+
+            $(".background-loader").fadeIn("slow");
+
+            that = $(this);
+
+            $.ajax({  url: '{{ (path('authenticate')) }}',
+                      type: "POST",
+                      dataType: "json",
+                      data: {
+                        "email": email,
+                        "password": password
+                      },
+                      async: true,
+                      success: function (data)
+                      {
+                        if(data == "Error")
+                        {
+
+                        }
+                        if(data == "Success")
+                        {
+
+                        }
+
+                        $(".background-loader").fadeOut("slow");
+                      }
+                    });
+          });
+
+          $(document).on('click', '#btn2', function()
+          {
+            window.location = '{{ (path('register')) }}';
+          });
+        </script>
+        <script src="{{ asset('js/login.js') }}"></script>
+{% endblock %}
